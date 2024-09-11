@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Login from './components/Login';
 import Register from './components/Register';
+import PopularCourses from './components/PopularCourses';
 import ProfileDashboard from './components/ProfileDashboard';
 import Main from './components/Main';
 const App = () => {
@@ -36,6 +37,9 @@ const App = () => {
         <Navbar />
         <main style={{ flex: 1, padding: '20px' }}>
           <Routes>
+            <Route path="/popular-course" element={
+              <PopularCourses />
+            } />
             <Route path="/login" element={
               <Login style={{
                 maxWidth: '400px',

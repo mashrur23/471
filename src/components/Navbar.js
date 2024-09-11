@@ -32,9 +32,10 @@
               fontSize: '16px',
             }}>
               <Link to="/" style={{ color: '#ecf0f1', textDecoration: 'none' }}>Home</Link>
+              <Link to="/popular-course" style={{ color: '#ecf0f1', textDecoration: 'none' }}>Popular Courses</Link>
+              <Link to="/profile" style={{ color: '#ecf0f1', textDecoration: 'none' }}>Profile</Link>
               <Link to="/login" style={{ color: '#ecf0f1', textDecoration: 'none' }}>Login</Link>
               <Link to="/register" style={{ color: '#ecf0f1', textDecoration: 'none' }}>Register</Link>
-              <Link to="/profile" style={{ color: '#ecf0f1', textDecoration: 'none' }}>Profile</Link>
             </div>
           </div>
         </nav>
