@@ -33,31 +33,31 @@ const Footer = () => {
 
         <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
-            <h3 className="font-bold text-gray-800 dark:text-white">Services</h3>
-            <ul className="mt-4 space-y-2 text-gray-600 dark:text-gray-300">
-              <li><a href="/" className="hover:text-secondary">Rock and Yoga</a></li>
-              <li><a href="/" className="hover:text-secondary">Healthy Diet</a></li>
-              <li><a href="/" className="hover:text-secondary">Fit to Health</a></li>
-              <li><a href="/" className="hover:text-secondary">Exercise</a></li>
+            <h3 className="font-bold text-gray-800 dark:text-black">Services</h3>
+            <ul className="mt-4 space-y-2 text-gray-600 text-black">
+              <li><a href="/" className="hover:text-secondary text-black">Rock and Yoga</a></li>
+              <li><a href="/" className="hover:text-secondary text-black">Healthy Diet</a></li>
+              <li><a href="/" className="hover:text-secondary text-black">Fit to Health</a></li>
+              <li><a href="/" className="hover:text-secondary text-black">Exercise</a></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-bold text-gray-800 dark:text-white">About</h3>
+            <h3 className="font-bold text-gray-800 dark:text-black">About</h3>
             <ul className="mt-4 space-y-2 text-gray-600 dark:text-gray-300">
-              <li><a href="/" className="hover:text-secondary">About Us</a></li>
-              <li><a href="/" className="hover:text-secondary">Careers</a></li>
-              <li><a href="/" className="hover:text-secondary">History</a></li>
-              <li><a href="/" className="hover:text-secondary">Our Team</a></li>
+              <li><a href="/" className="hover:text-secondary text-black">About Us</a></li>
+              <li><a href="/" className="hover:text-secondary text-black">Careers</a></li>
+              <li><a href="/" className="hover:text-secondary text-black">History</a></li>
+              <li><a href="/" className="hover:text-secondary text-black">Our Team</a></li>
             </ul>
           </div>
 
           <div>
             <h3 className="font-bold text-gray-800 dark:text-white">Support</h3>
             <ul className="mt-4 space-y-2 text-gray-600 dark:text-gray-300">
-              <li><a href="/" className="hover:text-secondary">FAQs</a></li>
-              <li><a href="/" className="hover:text-secondary">Contact</a></li>
-              <li><a href="/" className="hover:text-secondary">Live Chat</a></li>
+              <li><a href="/" className="hover:text-secondary text-black">FAQs</a></li>
+              <li><a href="/" className="hover:text-secondary text-black">Contact</a></li>
+              <li><a href="/" className="hover:text-secondary text-black">Live Chat</a></li>
             </ul>
           </div>
         </div>
