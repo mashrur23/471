@@ -94,7 +94,7 @@ const Footer = () => {
         </div>
 
         <p className="mt-12 text-center text-sm text-gray-500 dark:text-gray-400">
-          &copy; 2024. Company Name. All rights reserved.
+          &copy; 2024. Yoga King. All rights reserved.
         </p>
       </div>
     </footer>

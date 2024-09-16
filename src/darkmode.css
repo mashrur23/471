@@ -3,7 +3,7 @@
     --background-color: #f5f5f5;
     --text-color: #2c3e50;
     --link-color: #2980b9;
-    --nav-background: #ffffff;
+    --nav-background: #808000;
     --nav-text-color: #2c3e50;
     --box-shadow-color: rgba(0, 0, 0, 0.1);
 }
@@ -16,7 +16,15 @@
     --nav-text-color: #ecf0f1;
     --box-shadow-color: rgba(255, 255, 255, 0.1);
 }
-
+.light-mode {
+    --background-color: #f5f5f5;
+    --text-color: #2c3e50;
+    --link-color: #2980b9;
+    --nav-background: hsl(197, 100%, 25%);
+    --nav-text-color: #2c3e50;
+    --box-shadow-color: rgba(0, 0, 0, 0.1);
+}
+  
 body {
     background-color: var(--background-color);
     color: var(--text-color);
@@ -41,7 +49,22 @@ a {
 }
 
 a:hover {
-    color: #3498db; /* Or whatever you prefer for dark mode */
+    color: #3498db;
 }
 
-/* Add more styles for other elements if needed */
+
+footer {
+    background-color: var(--nav-background);
+    color: var(--nav-text-color);
+    padding: 20px;
+    text-align: center;
+}
+
+
+.dark-mode footer {
+    background-color: var(--nav-background); /* This will use the dark mode variable */
+    color: #ecf0f1 !important;/*var(--nav-text-color);*/
+}
+.dark-mode footer a {
+    color: #3498db; /* Ensure links are visible in dark mode */
+}
