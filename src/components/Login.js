@@ -5,27 +5,43 @@ import { useNavigate } from 'react-router-dom';
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [otp, setOtp] = useState('');
   const [error, setError] = useState('');
+  const [isOtpStep, setIsOtpStep] = useState(false); 
   const navigate = useNavigate();
 
+ 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
-      const { token } = response.data;
       
-      localStorage.setItem('token', token);
-      localStorage.setItem('user', JSON.stringify({ email }));
       
-      navigate('/profile');
+      setIsOtpStep(true);
+      localStorage.setItem('user', JSON.stringify({ email })); 
     } catch (error) {
       setError('Invalid credentials');
       console.error('Error logging in', error);
     }
   };
 
+  const handleOtpSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('http://localhost:5000/api/auth/verify-otp', { email, otp });
+      
+      const { token } = response.data;
+      localStorage.setItem('token', token); 
+      
+      navigate('/profile'); 
+    } catch (error) {
+      setError('Invalid OTP');
+      console.error('Error verifying OTP', error);
+    }
+  };
+
   return (
-    <form onSubmit={handleSubmit} style={{
+    <form onSubmit={isOtpStep ? handleOtpSubmit : handleSubmit} style={{
       maxWidth: '400px',
       margin: '0 auto',
       borderRadius: '8px',
@@ -33,23 +49,40 @@ const Login = () => {
       padding: '20px',
       backgroundColor: '#fff'
     }}>
-      <input
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="Email"
-        required
-        style={{ marginBottom: '10px' }}
-      />
-      <input
-        type="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        placeholder="Password"
-        required
-        style={{ marginBottom: '10px' }}
-      />
-      <button type="submit">Login</button>
+      {!isOtpStep ? (
+        <>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Email"
+            required
+            style={{ marginBottom: '10px' }}
+          />
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password"
+            required
+            style={{ marginBottom: '10px' }}
+          />
+          <button type="submit">Login</button>
+        </>
+      ) : (
+        <>
+          <p>A verification code has been sent to your email. Please enter the code below:</p>
+          <input
+            type="text"
+            value={otp}
+            onChange={(e) => setOtp(e.target.value)}
+            placeholder="Enter OTP"
+            required
+            style={{ marginBottom: '10px' }}
+          />
+          <button type="submit">Verify OTP</button>
+        </>
+      )}
       {error && <p style={{ color: 'red', marginTop: '10px' }}>{error}</p>}
     </form>
   );
