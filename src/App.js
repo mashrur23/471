@@ -2,6 +2,7 @@ import React from 'react';
 import './index.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import DarkToggle from './components/DarkToggle';
 import Footer from './components/Footer';
 import Login from './components/Login';
 import Register from './components/Register';
@@ -35,6 +36,7 @@ const App = () => {
         `}</style>
 
         <Navbar />
+        <DarkToggle /> {/* Dark mode toggle button */}
         <main style={{ flex: 1, padding: '20px' }}>
           <Routes>
             <Route path="/popular-course" element={
