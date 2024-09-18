@@ -2,12 +2,12 @@ import React from 'react';
 import './index.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import DarkToggle from './components/DarkToggle';
 import Footer from './components/Footer';
 import Login from './components/Login';
 import Register from './components/Register';
 import PopularCourses from './components/PopularCourses';
 import ProfileDashboard from './components/ProfileDashboard';
+import CourseCategory from './components/CourseCategory';
 import Main from './components/Main';
 const App = () => {
   return (
@@ -19,14 +19,15 @@ const App = () => {
         display: 'flex',
         flexDirection: 'column'
       }}>
-        
 
         <Navbar />
-        <DarkToggle /> {/* Dark mode toggle button */}
         <main style={{ flex: 1, padding: '20px' }}>
           <Routes>
             <Route path="/popular-course" element={
               <PopularCourses />
+            } />
+            <Route path="/course-category" element={
+              <CourseCategory />
             } />
             <Route path="/login" element={
               <Login style={{

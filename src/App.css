@@ -96,3 +96,60 @@ main {
   width: 1320px;
   margin: 0 auto;
 }
+
+.navmenu-wrapper-items {
+  display: flex;
+  gap: 20px;
+  font-size: 16px;
+  align-items: center;
+}
+
+.DarkToggle button {
+  color: #000;
+    background: #fff;
+    padding: 10px 20px;
+    border: none;
+    box-shadow: none;
+    font-weight: 600;
+    border-radius: 3px;
+    transition: .3s;
+}
+.DarkToggle button:hover {
+  background: #45a049;
+}
+.course-list-wrap {
+  height: auto !important;
+  text-align: center;
+  color: #fff;
+}
+.course-list-wrap a {
+  color: #fff !important;
+}
+button.bg-secondary {
+  background: #e79797;
+}
+
+.svg-icons svg {
+  width: 60px;
+  height: 60px;
+}
+
+span.svg-icons svg {
+  text-align: center;
+  margin: 0 auto 16px;
+}
+
+.course-list-wrap .info-cat {
+  padding: 40px 10px;
+}
+
+.dark-mode .app-container {
+  background: #282c34 !important;
+}
+
+.cta-button {
+  color: #fff;
+}
+.cta-button:hover {
+  color: #fff;
+}
