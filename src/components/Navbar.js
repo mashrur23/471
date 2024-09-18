@@ -3,17 +3,9 @@
       import { Link } from 'react-router-dom';
       
       const Navbar = () => (
-        <nav style={{
-          
-        }}>
-          <div style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            maxWidth: '1200px',
-            margin: '0 auto',
-          }}>
-            {/* Logo */}
+        <nav className='nav' >
+          <div className='arrange'>
+            
             <div>
               <Link to="/" style={{
                 fontSize: '24px',
@@ -36,6 +28,8 @@
               <Link to="/profile" style={{ color: '#ecf0f1', textDecoration: 'none' }}>Profile</Link>
               <Link to="/login" style={{ color: '#ecf0f1', textDecoration: 'none' }}>Login</Link>
               <Link to="/register" style={{ color: '#ecf0f1', textDecoration: 'none' }}>Register</Link>
+              <Link to="/instructors" style={{ color: '#ecf0f1', textDecoration: 'none' }}>InstructorsList</Link>
+              
             </div>
           </div>
         </nav>
