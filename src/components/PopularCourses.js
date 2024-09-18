@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 //import useAxiosFetch from '../../hooks/useAxiosFetch';
-import { Transition } from '@headlessui/react';
+//import { Transition } from '@headlessui/react';
 //import { useUser } from '../../hooks/useUser';
-import { toast } from 'react-toastify';
+//import { toast } from 'react-toastify';
 //import useAxiosSecure from '../../hooks/useAxiosSecure';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 const PopularCourses = () => {
   return (
     <div className="popular-course">
@@ -18,7 +18,6 @@ const PopularCourses = () => {
     <div className="relative hover:-translate-y-2 duration-150 hover:ring-[2px] hover:ring-secondary w-64 h-[350px] mx-auto bg-red-300 dark:bg-slate-600 rounded-lg shadow-lg overflow-hidden cursor-pointer">
         <div className="relative h-48">
             <div className="absolute inset-0 bg-black opacity-0 transition-opacity duration-300"></div>
-            <img src="" alt="Course Image" className="object-cover w-full h-full" />
             <div className="absolute inset-0 flex items-center justify-center">
                 <button className="px-4 py-2 text-white disabled:bg-red-300 bg-secondary duration-300 rounded hover:bg-red-700">
                     Select

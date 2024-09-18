@@ -18,21 +18,7 @@ const App = () => {
         display: 'flex',
         flexDirection: 'column'
       }}>
-        <style jsx global>{`
-          body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-          }
-
-          a {
-            text-decoration: none;
-            color: #ecf0f1;
-          }
-
-          a:hover {
-            color: #2980b9;
-          }
-        `}</style>
+        
 
         <Navbar />
         <main style={{ flex: 1, padding: '20px' }}>
