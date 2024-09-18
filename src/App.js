@@ -1,5 +1,6 @@
 import React from 'react';
 import './index.css';
+import './InstructorsList.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -7,6 +8,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import PopularCourses from './components/PopularCourses';
 import ProfileDashboard from './components/ProfileDashboard';
+import InstructorsList from './components/InstructorsList';
 import CourseCategory from './components/CourseCategory';
 import Main from './components/Main';
 const App = () => {
@@ -42,6 +44,17 @@ const App = () => {
             } />
             <Route path="/register" element={
               <Register style={{
+                maxWidth: '400px',
+                margin: '0 auto',
+                borderRadius: '8px',
+                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                padding: '20px',
+                backgroundColor: '#fff'
+              }}
+              />
+            } />
+            <Route path="/instructors" element={
+              <InstructorsList style={{
                 maxWidth: '400px',
                 margin: '0 auto',
                 borderRadius: '8px',

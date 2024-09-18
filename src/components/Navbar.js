@@ -35,6 +35,7 @@ const Navbar = () => (
         <Link to="/profile" style={{ color: '#ecf0f1', textDecoration: 'none' }}>Profile</Link>
         <Link to="/login" style={{ color: '#ecf0f1', textDecoration: 'none' }}>Login</Link>
         <Link to="/register" style={{ color: '#ecf0f1', textDecoration: 'none' }}>Register</Link>
+        <Link to="/instructors" style={{ color: '#ecf0f1', textDecoration: 'none' }}>InstructorsList</Link>
         <DarkToggle />
       </div>
     </div>
