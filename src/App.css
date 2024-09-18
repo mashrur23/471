@@ -91,3 +91,8 @@ p {
   font-size: 0.8em;
   color: #555;
 }
+
+main {
+  width: 1320px;
+  margin: 0 auto;
+}
