@@ -9,16 +9,16 @@ const Main = () => (
     </header>
     
     <section className="content">
-      <h2>About Our Course</h2>
+      <h2>About Our Courses</h2>
       <p>
         Join us for a transformative journey through yoga. Our courses are designed for all levels, 
         from beginners to advanced practitioners. Experience the benefits of yoga for your body and mind.
       </p>
-      <button className="cta-button">Join Now</button>
+      <a className="cta-button" href="/register">Join Now</a>
     </section>
     
     <footer className="footer">
-      <p>&copy; 2023 My Yoga Course. All rights reserved.</p>
+      <p>&copy; 2024 My Yoga Course. All rights reserved.</p>
     </footer>
   </div>
 );
